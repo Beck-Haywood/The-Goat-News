@@ -14,7 +14,7 @@ def register(request):
             password = request.POST['password1']
             user = authenticate(request, username=username, password=password)
             login(request, user)
-            return redirect('home')
+            return redirect('login')
     else:
         form = RegistrationForm()
 
