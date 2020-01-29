@@ -20,5 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('users.urls')),
     path('', include('newsapi.urls')),
+    path('', include('weather.urls')),
 
 ]
