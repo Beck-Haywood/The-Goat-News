@@ -31,10 +31,12 @@ def newsfeed(request):
     print(article1[1])
     print(article1[1]['source']['name'])
     source = article1[1]['source']['name']
-    #author = article1[1]['source']['author']
-    title = article1[1]['source']['title']
-
-    #url = article1[1]['source']['url']
+    author = article1[1]['author']
+    title = article1[1]['title']
+    url = article1[1]['url']
+    content = article1[1]['content']
+    image = article1[1]['urlToImage']
+    description = article1[1]['description']
 
 
 
@@ -48,7 +50,7 @@ def newsfeed(request):
     articles_list = response_dict['articles']
 
     df = pandas.read_json(json.dumps(articles_list))
-    context = {'source': source, 'title': title} #'title': title, 'author': author, 'url': url}}
+    context = {'source': source, 'title': title, 'author': author, 'url': url, 'content': content, 'image': image, 'description': description}
 
 
 
