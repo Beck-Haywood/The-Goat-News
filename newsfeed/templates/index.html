@@ -1,4 +1,77 @@
-<!DOCTYPE html> 
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>THE GOAT NEWS</title>
+  <link rel="stylesheet" type="text/css" href="{% static  'css/main.css' %}">
+</head>
+
+<body>
+  <section class="flex-contents">
+    <header role='banner' class="header">
+      <div class="logo">
+        <h1>THE GOAT NEWS</h1>
+      </div>
+      <nav role='navigation' class="navbar">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="{% url 'weather' %}">Weather</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main role="main">
+      <section class="hero">
+        <h2>THE GOAT NEWS</h2>
+      </section>
+      <section class="news">
+        <article>
+          <div class="card">
+            {% for new, des, i in mylist %}
+            <img src="{{ i }}" alt="" width="400" height="300">
+            <h1>news:</h1> {{ new }}
+            {{ value|linebreaks }}
+
+            <h4>description:</h4>{{ des }}
+            {{ value|linebreaks }}
+
+            {% endfor %}
+          </div>
+        </article>
+        <article>
+          <img src="https://d.pr/i/9rFl+" alt="" />
+          <h3>Article 2</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam temporibus reprehenderit nemo iure
+            aliquid veniam consequatur fugiat deleniti incidunt ad unde suscipit quaerat impedit doloribus voluptate
+            ipsum a est id.</p>
+        </article>
+        <article>
+          <img src="https://d.pr/i/igQI+" alt="" />
+          <h3>Article 3</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate nulla necessitatibus quidem voluptas
+            sapiente laboriosam ullam mollitia tenetur illo error atque fugiat neque repellat asperiores dolore cumque
+            itaque libero enim.</p>
+        </article>
+      </section>
+    </main>
+    <footer class="footer">
+      The GOAT NEWS
+    </footer>
+  </section>
+</body>
+
+</html>
+
+
+
+<!-- <!DOCTYPE html> 
 <html lang="en" dir="ltr"> 
   <head> 
     <meta charset="utf-8"> 
@@ -25,4 +98,4 @@
       {% endfor %} 
     </div> 
   </body> 
-</html> 
+</html>  -->
