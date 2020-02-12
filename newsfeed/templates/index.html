@@ -19,10 +19,19 @@
       </div>
       <nav role='navigation' class="navbar">
         <ul>
-          <li><a href="#">Home</a></li>
+          <li><a href="/">Home</a></li>
           <li><a href="{% url 'weather' %}">Weather</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Contact Us</a></li>
+          {% if user.is_authenticated %}
+          <li><a href="/logout">Log Out</a></li>
+          {% else %}
+          <li><a href="/login">Log In/Register</a></li>
+          {% endif %}
+
+          {% if user.is_authenticated %}
+          <li><span class="text-white">Welcome, <strong>{{ user.username }}</strong>!</span></li>
+          {% endif %}
         </ul>
       </nav>
     </header>
