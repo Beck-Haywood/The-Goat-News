@@ -131,6 +131,8 @@ main {
     -webkit-box-align: start;
     align-items: flex-start;
     min-height: 15rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .news article {

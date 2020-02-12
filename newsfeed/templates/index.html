@@ -31,19 +31,15 @@
         <h2>THE GOAT NEWS</h2>
       </section>
       <section class="news">
-        <article>
-          <div class="card">
-            {% for new, des, i in mylist %}
-            <img src="{{ i }}" alt="" width="400" height="300">
-            <h1>news:</h1> {{ new }}
-            {{ value|linebreaks }}
-
-            <h4>description:</h4>{{ des }}
-            {{ value|linebreaks }}
-
+            {% for new, des, i, url, author, source in mylist %}
+            <article>
+              <a href="{{url}}"><img src="{{ i }}" alt="" ></a>
+              <h1>{{new}}</h1>
+              <a href="{{url}}">{{source}}</a>
+              <h4>Description:</h4>{{ des }}
+            </article>
             {% endfor %}
           </div>
-        </article>
         <article>
           <img src="https://d.pr/i/9rFl+" alt="" />
           <h3>Article 2</h3>

@@ -2,7 +2,7 @@ from django.shortcuts import render, HttpResponseRedirect
 from django.views.generic import CreateView
 from newsapi.newsapi_client import NewsApiClient
 from newsapi import NewsApiClient 
-from newsfeed.models import Article
+# from newsfeed.models import Article
 # from newsfeed.forms import ApiForm
 
 import requests
@@ -21,6 +21,7 @@ def index(request):
     img =[] 
     author = []
     url = []
+    source = []
 
     for i in range(len(l)): 
         f = l[i] 
@@ -29,7 +30,9 @@ def index(request):
         img.append(f['urlToImage']) 
         author.append(f['author'])
         url.append(f['url'])
-    mylist = zip(title, desc, img, url, author) 
+        source.append(f['source']['name'])
+
+    mylist = zip(title, desc, img, url, author, source) 
   
     return render(request, 'index.html', context ={"mylist":mylist}) 
 def newsfeed(request):
