@@ -65,7 +65,7 @@ def index(request):
         "message": message,
         "message_class": message_class,
     }
-    return render(request, "weather.html", context)
+    return render(request, "weatherv2.html", context)
 
 
 def delete_city(request, city_name):
