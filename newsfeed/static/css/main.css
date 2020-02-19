@@ -80,6 +80,9 @@ img {
     min-height: 100%;
 }
 
+
+
+
 .navbar ul li {
     -webkit-box-flex: 1;
     flex: 1;
@@ -91,6 +94,8 @@ img {
     -webkit-box-pack: center;
     justify-content: center;
 }
+
+
 
 main {
     -webkit-box-flex: 8;

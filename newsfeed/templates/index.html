@@ -40,15 +40,15 @@
         <h2>THE GOAT NEWS</h2>
       </section>
       <section class="news">
-            {% for new, des, i, url, author, source in mylist %}
-            <article>
-              <a href="{{url}}"><img src="{{ i }}" alt="" ></a>
-              <h1>{{new}}</h1>
-              <a href="{{url}}">{{source}}</a>
-              <h4>Description:</h4>{{ des }}
-            </article>
-            {% endfor %}
-          </div>
+        {% for new, des, i, url, author, source in mylist %}
+        <article>
+          <a href="{{url}}"><img src="{{ i }}" alt=""></a>
+          <h1>{{new}}</h1>
+          <a href="{{url}}">{{source}}</a>
+          <h4>Description:</h4>{{ des }}
+        </article>
+        {% endfor %}
+        </div>
         <article>
           <img src="https://d.pr/i/9rFl+" alt="" />
           <h3>Article 2</h3>
