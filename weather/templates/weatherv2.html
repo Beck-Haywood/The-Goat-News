@@ -7,15 +7,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Weather</title>
-
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css" />
 
     <link rel="stylesheet" type="text/css" href="{% static  'weather/css/styles.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static  'weather/css/main2.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.0/css/bulma.min.css" />"
-    <!-- <link
-        rel="stylesheet" href="new_style.css">
+
+
+    <!-- <link rel="stylesheet" href="new_style.css">
     <link rel="stylesheet" href="style.css"> -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </head>
 </head>
 
@@ -25,26 +26,18 @@
             <div class="logo">
                 <h1>THE GOAT NEWS</h1>
             </div>
+            <!-- <nav role='navigation' class="navbar"> -->
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="{% url 'weather' %}">Weather</a></li>
-                <li><a href="/about">About</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Weather</a></li>
+                <li><a href="#">About</a></li>
                 <li><a href="#">Contact Us</a></li>
-                {% if user.is_authenticated %}
-                <li><a href="/logout">Log Out</a></li>
-                {% else %}
-                <li><a href="/login">Log In/Register</a></li>
-                {% endif %}
-
-                {% if user.is_authenticated %}
-                <li><span class="text-white">Welcome, <strong>{{ user.username }}</strong>!</span></li>
-                {% endif %}
             </ul>
             </nav>
         </header>
         <main role="main">
             <section class="hero">
-                <h2>THE GOAT NEWS</h2>
+                <h2>THE GOAT WEATHER</h2>
             </section>
             <section class="section">
                 <div class="container">
@@ -63,15 +56,14 @@
                                     </div>
                                 </div>
                                 {% if message %}
-                                <div class="notification {{ message_class }} ">{{ message }}
-                                </div>
+                                <div class="notification {{ message_class }} ">{{ message }}</div>
                                 {% endif %}
                             </form>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class=" section">
+            <section class="section">
                 <div class='grid1'>
                     {% for city_weather in weather_data %}
                     <div class="box">
@@ -86,8 +78,7 @@
                                     <p>
                                         <span class="title">{{ city_weather.city }}</span>
                                         <br>
-                                        <span class="subtitle">{{ city_weather.temperature }}°
-                                            F</span>
+                                        <span class="subtitle">{{ city_weather.temperature }}° F</span>
                                         <br> {{ city_weather.description }}
                                     </p>
                                 </div>
