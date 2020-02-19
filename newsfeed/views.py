@@ -4,12 +4,13 @@ from newsapi.newsapi_client import NewsApiClient
 from newsapi import NewsApiClient 
 # from newsfeed.models import Article
 # from newsfeed.forms import ApiForm
+from django.contrib.auth.decorators import login_required
 
 import requests
 import json
 import pandas
 
-# Create your views here.  
+@login_required  
 def index(request): 
       
     newsapi = NewsApiClient(api_key ='1757fcbd46b14cdea7eda377d1906a60') 
