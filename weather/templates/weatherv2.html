@@ -28,7 +28,7 @@
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="{% url 'weather' %}">Weather</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="/about">About</a></li>
                 <li><a href="#">Contact Us</a></li>
                 {% if user.is_authenticated %}
                 <li><a href="/logout">Log Out</a></li>
@@ -63,14 +63,15 @@
                                     </div>
                                 </div>
                                 {% if message %}
-                                <div class="notification {{ message_class }} ">{{ message }}</div>
+                                <div class="notification {{ message_class }} ">{{ message }}
+                                </div>
                                 {% endif %}
                             </form>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="section">
+            <section class=" section">
                 <div class='grid1'>
                     {% for city_weather in weather_data %}
                     <div class="box">
@@ -85,7 +86,8 @@
                                     <p>
                                         <span class="title">{{ city_weather.city }}</span>
                                         <br>
-                                        <span class="subtitle">{{ city_weather.temperature }}° F</span>
+                                        <span class="subtitle">{{ city_weather.temperature }}°
+                                            F</span>
                                         <br> {{ city_weather.description }}
                                     </p>
                                 </div>
