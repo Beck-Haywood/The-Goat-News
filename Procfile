@@ -1,1 +1,1 @@
-web: gunicorn The-Goat-News.wsgi --log-file -
+web: gunicorn news.wsgi --log-file -
