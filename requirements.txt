@@ -7,3 +7,4 @@ newsapi-python==0.2.3
 django-heroku 
 djangorestframework==3.10.3
 whitenoise==5.0.1
+pandas==0.19.0
