@@ -1,4 +1,4 @@
 {
     "python.formatting.provider": "black",
-    "python.pythonPath": "env/bin/python3"
+    "python.pythonPath": "/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python"
 }
