@@ -56,6 +56,7 @@ img {
 
 .logo h1 {
   margin: 0;
+  font-size: 24px;
 }
 
 .row-nav {
@@ -181,4 +182,10 @@ main {
   display: grid;
   grid-gap: 50px;
   grid-template-columns: repeat(4, 1fr);
+}
+.overide {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+strong {
+  color: rgba(255, 255, 255, 0.5) !important;
 }

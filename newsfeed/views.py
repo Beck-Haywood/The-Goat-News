@@ -5,15 +5,18 @@ from newsapi import NewsApiClient
 # from newsfeed.models import Article
 # from newsfeed.forms import ApiForm
 from django.contrib.auth.decorators import login_required
-
 import requests
 import json
 import pandas
 
+import os
+from dotenv import load_dotenv
+load_dotenv()
+
 @login_required  
 def index(request): 
-      
-    newsapi = NewsApiClient(api_key ='1757fcbd46b14cdea7eda377d1906a60') 
+    api_key = os.getenv('key')
+    newsapi = NewsApiClient(api_key) 
     top = newsapi.get_top_headlines(sources ='techcrunch') 
   
     l = top['articles'] 
