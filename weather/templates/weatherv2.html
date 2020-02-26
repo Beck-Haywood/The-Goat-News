@@ -10,8 +10,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css" />
 
-    <link rel="stylesheet" type="text/css" href="{% static  'weather/css/styles.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static  'weather/css/main2.css' %}">
+    <!-- <link rel="stylesheet" type="text/css" href="{% static  'weather/css/styles.css' %}"> -->
+    <link rel="stylesheet" type="text/css" href="{% static  'weather/css/index.css' %}">
 
 
     <!-- <link rel="stylesheet" href="new_style.css">
@@ -24,26 +24,25 @@
     <section class="flex-contents">
         <header role='banner' class="header">
             <div class="logo">
-                <h1>THE GOAT NEWS</h1>
+                <h1>The GOAT WEATHER</h1>
             </div>
-            <!-- <nav role='navigation' class="navbar"> -->
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="{% url 'weather' %}">Weather</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="#">Contact Us</a></li>
-                {% if user.is_authenticated %}
-                <li><a href="/logout">Log Out</a></li>
-                {% else %}
-                <li><a href="/login">Log In/Register</a></li>
-                {% endif %}
-
-                {% if user.is_authenticated %}
-                <li><span class="text-white">Welcome, <strong>{{ user.username }}</strong>!</span></li>
-                {% endif %}
-            </ul>
-
+            <nav role='navigation' class="goat-navbar">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="{% url 'weather' %}">Weather</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    {% if user.is_authenticated %}
+                    <li><a href="/logout">Log Out</a></li>
+                    {% else %}
+                    <li><a href="/login">Log In/Register</a></li>
+                    {% endif %}
+                    {% if user.is_authenticated %}
+                    <li><span class="text-white">Welcome, <strong>{{ user.username }}</strong>!</span></li>
+                    {% endif %}
+                </ul>
             </nav>
+
         </header>
         <main role="main">
             <section class="hero">
