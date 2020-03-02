@@ -22,7 +22,7 @@
           <li><a href="/">Home</a></li>
           <li><a href="{% url 'weather' %}">Weather</a></li>
           <li><a href="/about">About</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <!-- <li><a href="#">Contact Us</a></li> -->
           {% if user.is_authenticated %}
           <li><a href="/logout">Log Out</a></li>
           {% else %}
@@ -49,20 +49,6 @@
         </article>
         {% endfor %}
         </div>
-        <article>
-          <img src="https://d.pr/i/9rFl+" alt="" />
-          <h3>Article 2</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam temporibus reprehenderit nemo iure
-            aliquid veniam consequatur fugiat deleniti incidunt ad unde suscipit quaerat impedit doloribus voluptate
-            ipsum a est id.</p>
-        </article>
-        <article>
-          <img src="https://d.pr/i/igQI+" alt="" />
-          <h3>Article 3</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate nulla necessitatibus quidem voluptas
-            sapiente laboriosam ullam mollitia tenetur illo error atque fugiat neque repellat asperiores dolore cumque
-            itaque libero enim.</p>
-        </article>
       </section>
     </main>
     <footer class="footer">
@@ -70,35 +56,4 @@
     </footer>
   </section>
 </body>
-
 </html>
-
-
-<!-- <!DOCTYPE html> 
-<html lang="en" dir="ltr"> 
-  <head> 
-    <meta charset="utf-8"> 
-    <title></title> 
-  
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
-  </head> 
-  <body> 
-    <div class="jumbotron"> 
-        <h1>Get The latest news on our website </h1>
-    </div> 
-  
-  
-    <div class="card"> 
-      {% for new, des, i in mylist %} 
-              <img src="{{ i }}" alt="" width="400" height="300"
-              > 
-              <h1>news:</h1> {{ new }} 
-              {{ value|linebreaks }} 
-  
-              <h4>description:</h4>{{ des }} 
-              {{ value|linebreaks }} 
-  
-      {% endfor %} 
-    </div> 
-  </body> 
-</html>  -->
