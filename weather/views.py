@@ -10,8 +10,8 @@ load_dotenv()
 @login_required
 def index(request):
     # weather api
-    url = os.environ.get('KEY2')
-    #url = os.getenv('key2')
+    # url = os.environ.get('KEY2')
+    url = os.getenv('key2')
 
     err_msg = ""
     message = ""

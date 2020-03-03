@@ -15,8 +15,8 @@ load_dotenv()
 
 @login_required  
 def index(request): 
-    #api_key = os.getenv('key')
-    api_key = os.environ.get('KEY')
+    api_key = os.getenv('key')
+    # api_key = os.environ.get('KEY')
 
     newsapi = NewsApiClient(api_key) 
     top = newsapi.get_top_headlines(sources ='techcrunch') 

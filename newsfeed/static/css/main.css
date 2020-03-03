@@ -168,6 +168,126 @@ main {
     text-align: center;
     text-transform: uppercase;
 }
+
 nav.navbar#nav {
     background-color: black !important;
+}
+
+
+
+.social-buttons {
+    position: relative;
+    bottom: -50px;
+    left: 200px;
+    display: flex;
+}
+
+.social-buttons a {
+    display: inline-flex;
+    text-decoration: none;
+    font-size: 18px;
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0 8px;
+}
+
+.social-buttons a::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-image: linear-gradient(rgb(19, 2, 2), rgb(2, 48, 57));
+    border-radius: 50%;
+    z-index: -1;
+    transition: 0.3s ease-in;
+}
+
+.social-buttons a:hover::before {
+    transform: scale(0);
+}
+
+.social-buttons a i {
+    transition: 0.3s ease-in;
+}
+
+.social-buttons a:hover i {
+    background-image: linear-gradient(white, rgb(2, 48, 57));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(2.2);
+}
+
+
+@media screen and (max-width: 1400px) {
+
+
+    .social-buttons {
+        position: relative;
+        bottom: -50px;
+        left: 100px;
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+
+
+    .social-buttons {
+        position: relative;
+        bottom: -30px;
+        left: 100px;
+        display: flex;
+    }
+}
+
+
+
+@media screen and (max-width: 1200px) {
+
+
+    .social-buttons {
+        position: relative;
+        bottom: -150px;
+        left: 100px;
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+
+    .social-buttons {
+        position: relative;
+        bottom: -150px;
+        left: 100px;
+        display: flex;
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+
+
+    .social-buttons {
+        position: relative;
+        bottom: -120px;
+        left: 100px;
+        display: flex;
+    }
+}
+
+
+
+@media screen and (max-width: 800px) {
+
+    .social-buttons {
+        position: relative;
+        bottom: -400px;
+        left: -150px;
+        display: flex;
+    }
 }
